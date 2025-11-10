@@ -30,3 +30,29 @@ Check if table is created, we read the table using `SELECT` query.
 SELECT * FROM users;
 ```
 It will fetch all the columns from table users.
+
+## Droping a database
+We can drop/delete a full database using the following query
+
+```sql
+DROP DATABASE database_name
+```
+
+## Writing script
+
+We write a script that contains all the reusable commands. The script is of extension .sql like - my_first_script.sql
+```sql
+CREATE DATABASE starteresql;
+USE startersql;
+CREATE TABLE users (
+ id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    gender ENUM('Male', 'Female', 'Other'),
+    date_of_birth DATE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+ );
+SELECT * FROM users;
+```
+
+We can re-use this file run all commands at once

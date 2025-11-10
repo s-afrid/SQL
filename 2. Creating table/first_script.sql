@@ -1,6 +1,5 @@
-USE firstdatabase;
-
--- creating a table
+CREATE DATABASE startersql;
+USE startersql;
 CREATE TABLE users (
  id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
@@ -9,9 +8,4 @@ CREATE TABLE users (
     date_of_birth DATE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
  );
-
--- select all columns from table users
 SELECT * FROM users;
-
--- drop a database
-DROP DATABASE vscodefirst;
