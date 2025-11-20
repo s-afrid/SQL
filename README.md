@@ -9,3 +9,6 @@ All about SQL
 
 3. Data types and constraints  
 [Datatypes and constraints](3.%20Datatypes%20and%20contraints/)
+
+4. Selecting data from tables  
+[Selecting data](4.%20Selecting%20data/)
