@@ -9,3 +9,7 @@ ALTER TABLE employees ADD COLUMN is_active BOOLEAN DEFAULT TRUE;
 ALTER TABLE employees DROP COLUMN is_active;
 
 ALTER TABLE employees MODIFY COLUMN name VARCHAR(150);
+
+ALTER TABLE employees MODIFY COLUMN department VARCHAR(150) AFTER name;
+
+SELECT * FROM employees;

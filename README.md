@@ -15,3 +15,7 @@ All about SQL
 
 5. Learn about altering a table  
 [Altering table](5.%20Altering%20table/)
+
+6. Inserting data into the table  
+[Inserting data](6.%20Inserting%20data/)
+
