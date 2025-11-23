@@ -19,3 +19,5 @@ All about SQL
 6. Inserting data into the table  
 [Inserting data](6.%20Inserting%20data/)
 
+7. Learn how to query data from database  
+[Query data](7.%20Query%20data/)
