@@ -12,3 +12,6 @@ All about SQL
 
 4. Selecting data from tables  
 [Selecting data](4.%20Selecting%20data/)
+
+5. Learn about altering a table  
+[Altering table](5.%20Altering%20table/)

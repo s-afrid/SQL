@@ -15,6 +15,20 @@
             "username": "root",
             "password": "Af02052002",
             "connectionTimeout": 100
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "ssh": "Disabled",
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "First SQL",
+            "database": "startersql",
+            "username": "root"
         }
     ]
 }
