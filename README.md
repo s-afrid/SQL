@@ -23,5 +23,8 @@ All about SQL
 [Query data](7.%20Query%20data/)
 
 8. Learn how to update existing data from database  
-[Update](8.%20Update%20data/)
+[Update data](8.%20Update%20data/)
+
+9. Learn about deleting data from database  
+[Delete data](9.%20Delete%20data/)
 
