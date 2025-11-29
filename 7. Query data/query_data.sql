@@ -26,4 +26,4 @@ SELECT * FROM employees ORDER BY salary DESC;
 SELECT * FROM employees WHERE name LIKE 'A%';
 
 SELECT * FROM employees WHERE name LIKE 'A%' AND department = 'IT';
-SELECT * FROM employees WHERE name LIKE '%a' AND department = 'IT';
+SELECT * FROM employees WHERE name LIKE '%a' OR department = 'IT';
