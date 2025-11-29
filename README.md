@@ -21,3 +21,7 @@ All about SQL
 
 7. Learn how to query data from database  
 [Query data](7.%20Query%20data/)
+
+8. Learn how to update existing data from database  
+[Update](8.%20Update%20data/)
+
