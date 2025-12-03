@@ -38,6 +38,16 @@ validity, and integrity of the data.
     ```
     Make the same column allow null value.
 
+3. `CHECK`:  
+    Ensures that values in a column satisfy a specific condition.
+    ```sql
+    ALTER TABLE users
+    ADD CONSTRAINT chk_dob CHECK (date_of_birth > '2000-01-01');
+    ```
+    Allow date of births only above 1 Jan 2000. Naming the constraint ( chk_dob ) helps if you want to drop it later.
+
+
+
 
 
 
