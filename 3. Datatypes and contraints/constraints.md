@@ -17,3 +17,28 @@ validity, and integrity of the data.
     ADD CONSTRAINT unique_email UNIQUE (email);
     ```
     The email field is set to unique and also optionally we can name this constraint as unique_email.
+
+2. `NOT NULL`:  
+    Ensure that a column cannot contain NULL values.
+    ```sql
+    CREATE TABLE users (
+    id INT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL
+    );
+    ```
+    While creating a table set the name column to be not null. This field should never be empty.
+    ```sql
+    ALTER TABLE users
+    MODIFY COLUMN name VARCHAR(100) NOT NULL;
+    ```
+    Set existing column to not null
+    ```sql
+    ALTER TABLE users
+    MODIFY COLUMN name VARCHAR(100) NULL;
+    ```
+    Make the same column allow null value.
+
+
+
+
+
