@@ -46,6 +46,48 @@ validity, and integrity of the data.
     ```
     Allow date of births only above 1 Jan 2000. Naming the constraint ( chk_dob ) helps if you want to drop it later.
 
+4. `DEFAULT`:  
+    Sets a default value for a column if none is provided during insert.
+    ```sql
+    CREATE TABLE users (
+    id INT PRIMARY KEY,
+    is_active BOOLEAN DEFAULT TRUE
+    );
+    ```
+    If not inserted then set value of is_active to TRUE as default value.
+    ```sql
+    ALTER TABLE users
+    ALTER COLUMN is_active SET DEFAULT TRUE;
+    ```
+    Set existing column as default using `ALTER COLUMN` clause.
+
+5. `PRIMARY KEY`:  
+    Uniquely identifies each row. Must be NOT NULL and UNIQUE.
+    ```sql
+    CREATE TABLE users (
+    id INT PRIMARY KEY,
+    name VARCHAR(100)
+    );
+    ```
+    The column id is set to primary key which means the value cannot be NULL or duplicate.
+    ```sql
+    ALTER TABLE users
+    ADD PRIMARY KEY (id);
+    ```
+    Add a primary key to existing table.
+
+6. `AUTO_INCREMENT`:  
+    Used with PRIMARY KEY to automatically assign the next number.
+    ```sql
+    CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100)
+    );
+    ```
+    Each new row gets the next available integer value in id .
+
+
+
 
 
 
