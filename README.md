@@ -28,5 +28,4 @@ All about SQL
 9. Learn about deleting data from database  
 [Delete data](9.%20Delete%20data/)
 
-10. 
 
