@@ -272,3 +272,5 @@ SQL constraints are rules used to limit the type of data that can be stored in a
     </td>
   </tr>
 </table>
+
+Learn in detail : [Constraints](constraints.md)

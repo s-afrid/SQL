@@ -28,5 +28,9 @@ All about SQL
 9. Learn about deleting data from database  
 [Delete data](9.%20Delete%20data/)
 
+<<<<<<< HEAD
 10. Learn about SQL functions  
 [SQL functions](10.%20SQL%20Functions/)
+=======
+
+>>>>>>> 6492aace29ff9c17e208ba9b3362e62f4503fbb8
