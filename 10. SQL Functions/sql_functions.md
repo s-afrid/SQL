@@ -37,4 +37,20 @@ SQL functions are built-in programs used to process, manipulate, or perform calc
         GROUP BY gender;
         ```
 2. String Functions  
-    
+
+    - `LENGTH()`:  
+        Length of user names
+        ```sql
+        SELECT name, LENGTH(name) AS name_length FROM users;
+        ```
+    - `LOWER()` and `UPPER()`:  
+        Convert names to lowercase or uppercase
+        ```sql
+        SELECT name, LOWER(name) AS lowercase_name FROM users;
+        SELECT name, UPPER(name) AS uppercase_name FROM users;
+        ```
+    - `CONCAT()`:  
+        Combine name and email
+        ```sql
+        SELECT CONCAT(name, ' <', email, '>') AS user_contact FROM users;
+        ```
