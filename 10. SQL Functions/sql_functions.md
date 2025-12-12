@@ -75,3 +75,18 @@ SQL functions are built-in programs used to process, manipulate, or perform calc
         ```sql
         SELECT name, TIMESTAMPDIFF(YEAR, date_of_birth, CURDATE()) AS age FROM users;
         ```
+4. Mathematics Functions
+    - `ROUND()`, `FLOOR()` and `CEIL()`:  
+        find rounded values with ceil and floor of a decimal number
+        ```sql
+        SELECT salary,
+            ROUND(salary) AS rounded,
+            FLOOR(salary) AS floored,
+            CEIL(salary) AS ceiled
+        FROM users;
+        ```
+    - `MOD()`:  
+        Find even or odd user ID
+        ```sql
+        SELECT id, MOD(id, 2) AS remainder FROM users;
+        ```
