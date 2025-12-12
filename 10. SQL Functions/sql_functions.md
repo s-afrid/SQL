@@ -90,3 +90,11 @@ SQL functions are built-in programs used to process, manipulate, or perform calc
         ```sql
         SELECT id, MOD(id, 2) AS remainder FROM users;
         ```
+5. Condition Function  
+    - `IF()`:  
+        The query grabs the name and gender, but then invents a new column called is_female based on that test.
+        ```sql 
+        SELECT name, gender,
+       IF(gender ='Female','Yes','No') AS is_female
+        FROM users;
+        ```
