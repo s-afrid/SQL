@@ -54,3 +54,24 @@ SQL functions are built-in programs used to process, manipulate, or perform calc
         ```sql
         SELECT CONCAT(name, ' <', email, '>') AS user_contact FROM users;
         ```
+3. Date Functions
+    - `NOW()`:  
+        Current date and time
+        ```sql
+        SELECT NOW();
+        ```
+    - `YEAR()`, `MONTH()`, and `DAY()`:  
+        Extact part of the date column
+        ```sql
+        SELECT name, YEAR(date_of_birth) AS birth_year FROM users;
+        ```
+    - `DATEDIFF()`:  
+        Find number of days between today and birthdate
+        ```sql
+        SELECT name, DATEDIFF(CURDATE(), date_of_birth) AS days_lived FROM users;
+        ```
+    - `TIMESTAMPDIFF()`:  
+        Calculate age in years
+        ```sql
+        SELECT name, TIMESTAMPDIFF(YEAR, date_of_birth, CURDATE()) AS age FROM users;
+        ```
