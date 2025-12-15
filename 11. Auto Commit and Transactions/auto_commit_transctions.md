@@ -58,4 +58,21 @@ manage transactions manually.
     ```sql
     SET autocommit = 1;
     ```
-    
+
+
+In SQL, you often need to do 3 or 4 things in a row to complete one real-life task. A ***Transaction*** wraps all those steps together into a single, unbreakable mission.
+```sql
+START TRANSACTION;
+
+-- Step 1: Take money from you
+UPDATE Accounts SET balance = balance - 100 WHERE user_id = 1;
+
+-- Step 2: Give money to pizza shop
+UPDATE Accounts SET balance = balance + 100 WHERE user_id = 2;
+
+-- Step 3: Create the order ticket
+INSERT INTO Orders (user_id, item) VALUES (1, 'Pizza');
+
+COMMIT; -- HITS THE SAVE BUTTON
+```
+What happens if the power goes out at Step 2? Since the computer never reached the line COMMIT, the database wakes up, sees an unfinished transaction, and auto-executes ROLLBACK. It's like it never happened.
