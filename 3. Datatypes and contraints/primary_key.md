@@ -95,3 +95,4 @@ AUTO_INCREMENT using:
 ```sql
 ALTER TABLE users AUTO_INCREMENT = 1000;
 ```
+

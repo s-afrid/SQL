@@ -86,4 +86,7 @@ validity, and integrity of the data.
     ```
     Each new row gets the next available integer value in id .
 
+
 Learn about [Primary Key](primary_key.md)
+
+Learn about [Foreign Key](foriegn_key.md)
