@@ -30,3 +30,6 @@ All about SQL
 
 10. Learn about SQL functions  
 [SQL functions](10.%20SQL%20Functions/)
+
+11. Learn about auto commit and transactions  
+[Auto Commit and Transactions](11.%20Auto%20Commit%20and%20Transactions/)
