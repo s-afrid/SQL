@@ -80,3 +80,18 @@ To drop a UNIQUE constraint:
 ```sql
 ALTER TABLE users DROP INDEX email;
 ```
+
+### Auto Increment
+In MySQL, a `PRIMARY KEY` is often used with the `AUTO_INCREMENT` attribute to
+automatically generate unique values for new rows.
+```sql
+CREATE TABLE users (
+id INT AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(100)
+);
+```
+This means that every time you insert a new row, MySQL will automatically assign a unique value to the id column. You can change the starting value of
+AUTO_INCREMENT using:
+```sql
+ALTER TABLE users AUTO_INCREMENT = 1000;
+```
