@@ -138,4 +138,46 @@ users addresses
 => all users + matched addresses (or NULL)
 ```
 
+3. RIGHT JOIN
 
+Returns **all rows from the right table** ( addresses ), and matching rows from the
+left table ( users ). If no match is found, NULLs are returned.
+```sql
+SELECT users.name, addresses.city
+FROM users
+RIGHT JOIN addresses ON users.id = addresses.user_id;
+```
+**Output**
+<table>
+<tr>
+<th>name</th>
+<th>city</th>
+</tr>
+
+<tr>
+<td>Aarav</td>
+<td>Mumbai</td>
+</tr>
+
+<tr>
+<td>Sneha</td>
+<td>Kolkata</td>
+</tr>
+
+<tr>
+<td>NULL</td>
+<td>Delhi</td>
+</tr>
+</table>
+
+`Delhi` is shown even though it points to a `user_id` that doesn't exist.
+
+**Visual representation**
+```css
+users addresses
+----- ------
+| 1 | | 1 |
+| 2 | | 2 |
+|   | | 4 |
+=> all addresses + matched users (or NULL)
+```
