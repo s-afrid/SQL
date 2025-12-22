@@ -33,3 +33,6 @@ All about SQL
 
 11. Learn about auto commit and transactions  
 [Auto Commit and Transactions](11.%20Auto%20Commit%20and%20Transactions/)
+
+12. Learn about MySQL joins  
+[Joins](12.%20MySQL%20Joins/)
