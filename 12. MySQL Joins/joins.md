@@ -55,3 +55,32 @@ We will use two tables here:
 </table>
 
 Note: `user_id` is a ***foreign key*** that references `user.id`
+
+1. INNER JOIN
+
+Returns **only the matching rows from the tables.
+```sql
+SELECT users.name, addresses.city
+FROM users
+INNER JOIN addresses ON users.id = addresses.user_id;
+```
+**Output**
+<table>
+<tr>
+<th>name</th>
+<th>city</th>
+</tr>
+
+<tr>
+<td>Aarav</td>
+<td>Mumbai</td>
+</tr>
+
+<tr>
+<td>Sneha</td>
+<td>Kolkata</td>
+</tr>
+</table>
+
+`Raj` is excluded because there is no matching address. `Delhi` is excluded because its `user_id (4)` is not in `users`.
+
