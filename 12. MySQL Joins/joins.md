@@ -94,6 +94,8 @@ users addresses
 => only matching pairs
 ```
 
+![alt text](inner_join.png)
+
 2. LEFT JOIN
 
 Returns all rows from the left table ( users ), and matching rows from the right
@@ -138,6 +140,8 @@ users addresses
 => all users + matched addresses (or NULL)
 ```
 
+![alt text](left_join.png)
+
 3. RIGHT JOIN
 
 Returns **all rows from the right table** ( addresses ), and matching rows from the
@@ -181,3 +185,5 @@ users addresses
 |   | | 4 |
 => all addresses + matched users (or NULL)
 ```
+
+![alt text](right_join.png)
