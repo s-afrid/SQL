@@ -84,3 +84,58 @@ INNER JOIN addresses ON users.id = addresses.user_id;
 
 `Raj` is excluded because there is no matching address. `Delhi` is excluded because its `user_id (4)` is not in `users`.
 
+**Visual representation**
+```css
+users addresses
+----- ------
+| 1 | | 1 |
+| 2 | | 2 |
+|   | |   |
+=> only matching pairs
+```
+
+2. LEFT JOIN
+
+Returns all rows from the left table ( users ), and matching rows from the right
+table ( addresses ). If no match is found, NULLs are returned.
+```sql
+SELECT users.name, addresses.city
+FROM users
+LEFT JOIN addresses ON users.id = addresses.user_id;
+```
+**Output**
+<table>
+<tr>
+<th>name</th>
+<th>city</th>
+</tr>
+
+<tr>
+<td>Aarav</td>
+<td>Mumbai</td>
+</tr>
+
+<tr>
+<td>Sneha</td>
+<td>Kolkata</td>
+</tr>
+
+<tr>
+<td>Raj</td>
+<td>NULL</td>
+</tr>
+</table>
+
+`Raj` is shown even though he doesn't have an address
+
+**Visual representation**
+```css
+users addresses
+----- ------
+| 1 | | 1 |
+| 2 | | 2 |
+| 3 | |   |
+=> all users + matched addresses (or NULL)
+```
+
+
