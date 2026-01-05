@@ -36,3 +36,6 @@ All about SQL
 
 12. Learn about MySQL joins  
 [Joins](12.%20MySQL%20Joins/)
+
+13. Learn about Union and Union all  
+[Union and Union all](13.%20Union%20and%20Union%20all/)
