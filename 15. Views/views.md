@@ -21,6 +21,8 @@ It saves a specific query under a name (high_salary_users) so you can use it lat
 
 You can treat high_salary_users just like a real table.
 
+The command `CREATE VIEW` has one strict rule: It must be followed by a `SELECT` statement. You cannot use `INSERT`, `UPDATE`, or `DELETE` inside the definition of a view.
+
 ### Querying the view
 
 ```sql
