@@ -42,3 +42,6 @@ All about SQL
 
 14. Learn about self JOIN  
 [Self JOIN](14.%20Self%20Join/)
+
+15. Learn about views in MySQL  
+[Views](15.%20Views/)
