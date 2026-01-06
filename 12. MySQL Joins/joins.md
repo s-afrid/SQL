@@ -58,7 +58,7 @@ Note: `user_id` is a ***foreign key*** that references `user.id`
 
 1. INNER JOIN
 
-Returns **only the matching rows from the tables.
+Returns **only** the matching rows from the tables.
 ```sql
 SELECT users.name, addresses.city
 FROM users

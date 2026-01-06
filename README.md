@@ -39,3 +39,6 @@ All about SQL
 
 13. Learn about Union and Union all  
 [Union and Union all](13.%20Union%20and%20Union%20all/)
+
+14. Learn about self JOIN  
+[Self JOIN](14.%20Self%20Join/)
