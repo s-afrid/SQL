@@ -48,3 +48,6 @@ All about SQL
 
 16. Learn about MySQL indexes  
 [Indexes](16.%20MySQL%20indexes/)
+
+17. Learn what are subqueries  
+[Subqueries](17.%20Subqueries/)
