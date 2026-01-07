@@ -45,3 +45,6 @@ All about SQL
 
 15. Learn about views in MySQL  
 [Views](15.%20Views/)
+
+16. Learn about MySQL indexes  
+[Indexes](16.%20MySQL%20indexes/)
