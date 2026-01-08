@@ -101,10 +101,46 @@ Why not `WHERE`?
 Another example with groups more than 1 referels
 
 ```sql
-ELECT referred_by_id, COUNT(*) AS total_referred
+SELECT referred_by_id, COUNT(*) AS total_referred
 FROM users
 WHERE referred_by_id IS NOT NULL
 GROUP BY referred_by_id
 HAVING COUNT(*)>1;
 ```
+
+### ROLLUP
+
+To get subtotals and grand totals, you can use `ROLLUP`
+
+```sql
+SELECT gender, COUNT(*) AS total_users
+FROM users
+GROUP BY gender WITH ROLLUP;
+```
+
+The output
+
+<table border=1>
+<tr>
+<th class='medium'>gender</th>
+<th class='medium'>total_users</th>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>Male</td>
+<td class='normal' valign='top'>12</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>Female</td>
+<td class='normal' valign='top'>13</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'></td>
+<td class='normal' valign='top'>25</td>
+</tr>
+</table>
+
+This will give you a count of users by gender, along with a grand total for all users.
 
