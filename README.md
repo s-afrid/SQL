@@ -51,3 +51,6 @@ All about SQL
 
 17. Learn what are subqueries  
 [Subqueries](17.%20Subqueries/)
+
+18. Learn GROUP BY and HAVING clauses  
+[Group By and Having](18.%20Group%20By%20and%20Having/)
