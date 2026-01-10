@@ -109,6 +109,21 @@ The following are the operators used with `WHERE` clause.
       <td>Check if value is not NULL</td>
       <td>SELECT x IS NOT NULL;</td>
     </tr>
+    <tr>
+      <td>AND</td>
+      <td>All consitions must be true</td>
+      <td>salary > 50000 AND gender = 'Male'</td>
+    </tr>
+    <tr>
+      <td>OR</td>
+      <td>Atleast one condition is true</td>
+      <td>gender = 'Male' OR gender = 'Other'</td>
+    </tr>
+    <tr>
+      <td>NOT</td>
+      <td>Reverse a Condition</td>
+      <td>NOT gender = 'Female'</td>
+    </tr>
   </tbody>
 </table>
 
@@ -125,23 +140,54 @@ SELECT * FROM users WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31';
 
 -- Using IN to match values in a list
 SELECT * FROM users WHERE gender IN ('Male', 'Other');
+```
+```sql
+-- Using AND / OR operators  
+SELECT * FROM users WHERE gender = 'Female' AND date_of_birth > '1990-01-01';
+SELECT * FROM users WHERE gender = 'Male' OR gender = 'Other';
+```
 
+Wildcards are used with the LIKE operator for pattern matching in text.
+<table border="1" cellspacing="0" cellpadding="6">
+<thead>
+    <tr>
+      <th>Wildcard</th>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>%</td>
+      <td>Matches any sequence</td>
+      <td>WHERE name LIKE 'A%' (starts with A)</td>
+    </tr>
+    <tr>
+      <td>_</td>
+      <td>Matches a single character</td>
+      <td>WHERE name LIKE '_a%' (second letter is 'a')</td>
+    </tr>
+  </tbody>
+</table>
+
+```sql
 -- To match patterns using LIKE
 SELECT * FROM users WHERE name LIKE 'A%';-- Starts with A
 SELECT * FROM users WHERE name LIKE '%a';-- Ends with a
 SELECT * FROM users WHERE name LIKE '%li%';-- Contains 'li'
+```
 
--- Using AND / OR operators  
-SELECT * FROM users WHERE gender = 'Female' AND date_of_birth > '1990-01-01';
-SELECT * FROM users WHERE gender = 'Male' OR gender = 'Other';
-
+```sql
 -- Get data sorted according a column either in ascending or descending order
 SELECT * FROM users ORDER BY date_of_birth ASC;
 SELECT * FROM users ORDER BY name DESC;
+```
+LIMIT is used to limit the number of rows returned. OFFSET skips a number of rows before starting to return rows.
 
+```sql
 -- Get only limited data using LIMIT
 SELECT * FROM users LIMIT 5;-- Top 5 rows
 SELECT * FROM users LIMIT 10 OFFSET 5;-- Skip first 5 rows, then get next 10
-SELECT * FROM users LIMIT 5, 10;-- Get 10 rows starting from the 6th row (Same as
-above)
+SELECT * FROM users LIMIT 5, 10;-- Get 10 rows starting from the 6th row (Same as above)
 SELECT * FROM users ORDER BY created_at DESC LIMIT 10;
+```
