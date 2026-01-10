@@ -24,6 +24,13 @@ SELECT name, age FROM students;
     SELECT name, age FROM students;
     ```
 
+- Selecting only unique values  
+    `DISTINCT` is used to return only unique values.
+    ```sql
+    SELECT DISTINCT gender FROM users;
+    ```
+    Returns a list of unique gender values from the `users` table.
+
 ### Rename table
 To rename an existing table:
 ```sql

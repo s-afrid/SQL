@@ -40,3 +40,19 @@ To move a column at a particular position
 ALTER TABLE users MODIFY COLUMN gender ENUM('Male', 'Female', 'Other') AFTER name;
 ```
 This query modifies the gender column to use an ENUM with values 'Male', 'Female', and 'Other', and moves the column to appear immediately after the name column in the users table.
+
+Both `CHANGE` and `MODIFY` are used to alter existing columns in a table, but they work slightly differently.
+
+`CHANGE`: Rename and change datatype
+```sql
+ALTER TABLE users
+CHANGE COLUMN city location VARCHAR(150);
+```
+This renames city to location and changes its type.
+
+`MODIFY`: Only change datatype
+```sql
+ALTER TABLE users
+MODIFY COLUMN salary BIGINT;
+```
+This changes only the datatype of salary 

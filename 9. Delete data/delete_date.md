@@ -39,9 +39,6 @@ Drop the Entire Table (use with caution)
 ```sql
 DROP TABLE users;
 ```
-
- 
-
 - Always use WHERE unless you’re intentionally updating/deleting everything.
 - Consider running a SELECT  with the same WHERE clause first to confirm what
 will be affected
@@ -49,3 +46,11 @@ will be affected
 SELECT * FROM users WHERE id = 3;
 ```
 - Always back up important data before performing destructive operations
+
+Truncate table  
+```sql
+TRUNCATE TABLE users;
+```
+`TRUNCATE` removes all rows from a table, but keeps the table structure
+-  Faster than DELETE FROM users
+- Cannot be rolled back (unless in a transaction-safe environment).
