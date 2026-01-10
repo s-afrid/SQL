@@ -54,3 +54,9 @@ All about SQL
 
 18. Learn GROUP BY and HAVING clauses  
 [Group By and Having](18.%20Group%20By%20and%20Having/)
+
+19. Learn about stored procedures  
+[Stored Procedures](19.%20Stored%20Procedures/)
+
+20. Learn about triggers in MySQL  
+[Triggers](20.%20Triggers/)
